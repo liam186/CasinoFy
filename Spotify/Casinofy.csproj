@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <!-- ApplicationIcon removed because app.ico is not present in the project folder -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="Music\AlbumCovers\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="10.0.3" />
+    <PackageReference Include="Xabe.FFmpeg" Version="6.0.2" />
+    <PackageReference Include="Xabe.FFmpeg.Downloader" Version="6.0.2" />
+    <PackageReference Include="YoutubeExplode" Version="6.5.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Music\AlbumCovers\" />
+  </ItemGroup>
+
+</Project>
